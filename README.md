@@ -1,5 +1,5 @@
 # Wanderlust
-Wanderlust is a full-stack web application that allows users to list properties and write reviews. It also  has the features of Authentication, Authorisation, Restful APIs
+Wanderlust is a full-stack web application that allows users to list properties and write reviews. It also  has the features of Authentication, Authorisation and Restful APIs
 
 
 ## Features
@@ -11,7 +11,7 @@ Wanderlust is a full-stack web application that allows users to list properties 
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 | Category         | Tech Used              |
 |------------------|------------------------|
@@ -24,7 +24,7 @@ Wanderlust is a full-stack web application that allows users to list properties 
 
 
 🧪 Key Functionalities
-List a Property: Add title, description, image, price, and map location.
+List a Property: Add title, description, image, price, location and country name.
 
 Review Listings: Post reviews and ratings.
 
