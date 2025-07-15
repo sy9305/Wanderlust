@@ -1,0 +1,281 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navbar */
+.nav-dropdown-para {
+  margin-bottom: 0px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.compass-icon {
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+.fa-user-circle {
+font-size: 1.8rem;
+color: black;
+display: inline-block;
+opacity: 1 !important; /* override accidental hidden states */
+visibility: visible !important;
+}
+
+.fa-user {
+  color: white;
+}
+
+.profile-text {
+  color: white;
+}
+
+.profile-dropdown {
+  color: white;
+}
+
+.home-icon {
+  text-align: center;
+}
+
+.list-home {
+  padding-top: 0.5rem;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+
+#filters {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+
+.filter-anchor {
+    text-decoration: none;
+    color: black;
+}
+
+.filter {
+    display: inline-block;
+    text-align: center;
+    margin-right: 2rem;
+    opacity: 0.6;
+}
+
+
+#searchBy {
+  margin-right: 0.5rem;
+  border: 1px solid black;
+  width: 8rem;
+}
+
+.search-inp {
+  width: 12rem;
+}
+
+.search-btn {
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+
+/* footer */
+.f-info-links{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-linksca:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brands{
+    width: 100%;
+   display:flex ;
+   align-items: center;
+   justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info{
+    margin-top: 2rem;
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+
+.sbt-btn:hover {
+    border: 0.1rem solid black;
+}
+
+.form-control {
+    border: 0.09rem solid black !important;
+}
+
+.index-card {
+        border: none;
+}
+
+.listing-card-img-top {
+    border-radius: 1rem;
+    height: 20rem;
+    width: 100%;
+}
+
+.listing-card-body {
+    padding: 0 0 0 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.listing-link:hover {
+    opacity: 0.75;
+}
+
+.show-listing-card {
+        border: none;
+}
+
+.show-img {
+    height: 20rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.show-text {
+    line-height: 1rem;
+    font-weight: 450;
+    font-size: 1.3rem;
+}
+
+.show-line-gap {
+    line-height: 1.5rem;
+}
+
+.show-review-card {
+    margin-bottom: 1rem;
+}
+
+.show-comment {
+    padding-top: 0.7rem;
+}
+
+.show-time {
+    font-weight: 400;
+    font-size: small;
+}
+
+.show-user {
+    font-size: 1rem;
+}
+
+#map {
+    height: 35rem;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
+/* flash */
+
+@keyframes shrinkBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.alertMsg {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.succTimer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.4rem;
+    background-color: violet;
+    animation: shrinkBar 5s linear forwards;
+    width: 0%;
+}
+
+.errTimer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.4rem;
+    background-color: red;
+    animation: shrinkBar 5s linear forwards;
+    width: 0%;
+}
+
+.form-body {
+    background-color: blue;
+}
+
+.image {
+    background-image: url("./../form-page.jpg");
+    background-size: cover;
+    height: 80vh;
+    margin-top: 2rem;
+}
+
+.register-form {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    background-color: white;
+}
+
+.log-in-form {
+    margin-top: 2rem;
+    padding-top: 4rem;
+    background-color: white;
+}
+
+.small-text {
+    font-size: 1rem;
+}
+
+#category {
+  width: 100%;
+  height: 2.3rem;
+  border: 1.5px solid black;
+  border-radius: 0.5rem;
+}
+
+.note {
+  color: red;
+}

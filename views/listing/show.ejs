@@ -1,0 +1,217 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+
+/* .show-owner-detail {
+    padding-right: 5rem;
+    display: flex;
+    justify-content: space-between;
+} */
+
+.show-owner-detail {
+  padding: 0 1rem;
+}
+
+.para-note {
+    color: red;
+}
+
+
+</style>
+
+
+
+<script>
+    const coords = <%- JSON.stringify(listing.locationCoordinates.coordinates) %>;
+    const mapLocation= <%- JSON.stringify(listing.location) %>;
+</script>
+
+<body>
+
+    <div class="row mt-2">
+        <div class="col-8 offset-2">
+            <h3><b>Listing Details</b></h3>
+        </div>
+        
+        <div class="show-listing-card col-8 mt-1 mb-2 offset-2">
+            <img class="mt-3 mb-3 show-img" src="<%= listing.image.path %>" class="card-img-top" alt="listingImage">
+            <div class="card-body show-text">
+                <b class="card-text show-line-gap"><%= listing.title %></b><br><br>
+                <p class="card-text show-line-gap"><%= listing.description %></p>
+                <p class="card-text show-line-gap"><b>Price: </b>&#8377;<%= listing.price.toLocaleString("en-IN") %>/ Night</p>
+                <p class="card-text show-line-gap"><b>Location: </b><%= listing.location %></p>
+                <p class="card-text show-line-gap"><b>Locality Pincode: </b><%= listing.pincode %></p>
+                <p class="card-text show-line-gap"><b>Country: </b><%= listing.country %></p>
+
+                <% if(currUser){ %>
+                    <div class="accordion mb-3" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <b>Owner Details:</b>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row text-start px-3">
+                                        <div class="col-md-6 col-12">
+                                            <p class="show-line-gap"><b>Name:</b> <%= (listing.owner.firstName + " " + listing.owner.lastName) %></p>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <p class="show-line-gap"><b>Username:</b> <%= listing.owner.username %></p>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <p class="show-line-gap"><b>Email:</b> <%= listing.owner.email %></p>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <p class="show-line-gap"><b>Contact no.:</b> <%= listing.owner.mobile %></p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <p class="show-line-gap"><b class="para-note">Note: </b> <a href="/login">Login </a>to see the Owner details.</p>
+                <% } %>
+
+                <% if(currUser && ( listing.owner._id.equals(currUser._id) )){ %>  
+                    <div class="card-body d-flex justify-content-between">
+
+                        <!-- Button trigger modal for edit -->
+                        <button type="button" class="btn btn-primary edit-btn sbt-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop-edit">
+                            Edit
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop-edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-edit" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel-edit">Alert!</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        You are about to update the listing
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="/listing/<%= listing._id %>/edit" method="GET">
+                                            <button class="btn btn-primary sbt-btn"> Proceed </button>
+                                        </form>
+                                        <button type="button" class="btn btn-secondary sbt-btn" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Button trigger modal for delete -->
+                        <button type="button" class="btn btn-danger sbt-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop-delete">
+                            Delete
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop-delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-delete" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel-delete">Alert!</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure that you want to delete your listing ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="/listing/<%= listing._id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-danger sbt-btn"> Yes </button>
+                                        </form>
+                                        <button type="button" class="btn btn-secondary sbt-btn" data-bs-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                <% } %>
+            </div>
+        </div>
+
+    
+
+        <!-- Review Part -->
+    
+        <div class="col-8 offset-2 title">
+            <hr>
+            <h3><b>Leave a Review here!</b></h3>
+        </div>
+
+        <!-- Create a Review -->
+        <div class="col-8 offset-2">
+            <form action="/listing/<%= listing._id %>/review" method="POST">
+
+                <!-- <label for="comment" class="form-label mt-2">Rating</label><br> -->
+                <fieldset class="starability-slot">
+                    <legend>Rating</legend>
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+
+
+                <div class="col-12">
+                    <label for="comment" class="form-label show-comment"><legend>Comment</legend></label>
+                    <textarea rows=4 cols=175 class="form-control" name="comment" id="comment" placeholder="Write your comment here" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary mt-3 sbt-btn">
+                    Add Review
+                </button>
+            </form>
+            <hr>
+        </div>
+
+        <!-- View all Review -->
+        <% if(listing.reviews.length > 0){ %>
+            <div class="col-8 offset-2">
+                <h3>All Reviews</h3>
+
+                <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 g-3">
+                    <% for(let i = listing.reviews.length - 1; i >= 0; i--){ %>
+                        <div class="col">
+                            <div class="card show-review-card h-100 d-flex flex-column justify-content-between">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title show-user"><%= listing.reviews[i].author.username %> &nbsp;<small class="show-time"><%= moment(listing.reviews[i].createdAt).fromNow() %></small></h5>
+                                        <p class="card-text"><%= listing.reviews[i].comment %></p>
+                                        <p class="starability-result" data-rating="<%= listing.reviews[i].rating %>" > </p>
+                                    </div>
+                                    <% if(currUser &&  ( listing.reviews[i].author._id.equals(currUser._id) )){ %>
+                                        <form action="/listing/<%= listing._id %>/review/<%= listing.reviews[i]._id %>?_method=DELETE " method="POST" class="mt-auto text-end">
+                                          <button class="btn btn-danger btn-sm sbt-btn">Delete</button>
+                                        </form>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <hr>
+            </div>
+        <% } %>
+
+
+        <!-- Map Part -->
+        <div class="col-8 offset-2">
+            <h3>Where you will be</h3>
+            <div id="map"></div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+
+<body class="form-body">
+    <div class="row">
+        <div class="col-6 mt-6 image">
+        </div>
+
+        <div class="col-6 log-in-form">
+            <div class="text-center">
+                <h3><b>Login to your Account</b></h3>
+            </div>
+            
+            <form action="/login" method="POST">      
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <label for="userName" class="form-label">Username</label>
+                        <input type="text" class="form-control inputField" name="username" id="userName" placeholder="Enter Username" required>
+                    </div>
+                        
+                    <div class="col-md-12 mt-2">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control inputField" name="password" id="password" placeholder="Enter Password" required>
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-2">
+                        <small class="small-text">If new user, <a href="/register">Sign up</a> to create a account</small>
+                    </div>
+                    
+                    <div class="col-4 mt-2">
+                        <button type="submit sbt-btn" class="btn btn-success sbt-btn">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>

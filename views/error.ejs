@@ -1,0 +1,14 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+  <div class="container mt-2">
+    <div class="row alert alert-danger alert-dismissible fade show col-6 offset-3 alertMsg" role="alert">
+      <div class="content">
+        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+        <span><%= message %></span>
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="errTimer"></div>
+    </div>
+  </div>
+</body>

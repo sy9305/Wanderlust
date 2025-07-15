@@ -1,0 +1,85 @@
+<% layout("/layouts/boilerplate") %>
+
+<body class="form-body">
+    <div class="row mt-2">
+        <div class="col-6 mt-6 image">
+        </div>
+
+        <div class="col-6 register-form">
+            <div class="col-12 text-center heading">
+                <h3><b>Registration Page</b></h3>
+            </div>
+            
+            <div class="col-12">
+                <form  id="registrationForm" action="/register" method="POST">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First name" aria-label="First name" required>
+                        </div>
+                        <div class="col">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last name" aria-label="Last name" required>
+                        </div>
+                    </div>
+        
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Id" required>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="mobile" class="form-label">Mobile</label>
+                            <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Enter Mobile no." required>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-2">
+                        <div class="col-md-5">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" name="state" id="state" placeholder="Enter State" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" name="country" id="country" placeholder=" Enter Country" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="pincode" class="form-label">Pincode</label>
+                            <input type="number" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode no." required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 mt-2">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" required>
+                    </div>
+                    
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder=" Enter Confirm Password" required>
+                        </div>
+                    </div>
+        
+                    <div id="error-message" class="text-danger mt-2"></div>
+                    
+                    <div class="col-4 mt-2">
+                        <button type="submit" class="btn btn-primary sbt-btn">Sign up</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+</div>
+</body>

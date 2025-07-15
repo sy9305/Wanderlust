@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="heading">
+        <h3>Edit The Listing!</h3>
+      </div>
+
+      <form class="row g-3" action="/listing/<%= listing._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="col-12">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name="title" value="<%= listing.title %>" placeholder="Enter Title" required>
+        </div>
+      
+        <div class="col-12">
+          <label for="description" class="form-label">Description</label><br>
+          <textarea rows=4 cols=175 class="form-control" name="description" id="description" placeholder="Enter Description" required><%= listing.description %></textarea>
+        </div>
+      
+        <div class="col-12">
+          <label for="image" class="form-label">Upload Image</label>
+          <input type="file" class="form-control" id="image" name="image">
+        </div>
+        
+        <div class="col-md-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" name="price" value="<%= listing.price %>" id="price" placeholder="Enter Price per Night" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="category" class="form-label">Category</label><br>
+          <select name="category" id="category" required>
+            <option value="Trending" <%= listing.category === "Trending" ? "selected" : "" %> >Trending</option>
+            <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %> >Rooms</option>
+            <option value="Mountains" <%= listing.category === "Mountains" ? "selected" : "" %> >Mountains</option>
+            <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %> >Camping</option>
+            <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %> >Farms</option>
+            <option value="Castles" <%= listing.category === "Castles" ? "selected" : "" %> >Castles</option>
+            <option value="Cities" <%= listing.category === "Cities" ? "selected" : "" %> >Iconic Cities</option>
+            <option value="Arctic" <%= listing.category === "Arctic" ? "selected" : "" %> >Arctic</option>
+            <option value="Pools" <%= listing.category === "Pools" ? "selected" : "" %> >Amazing Pools</option>
+            <option value="Beaches" <%= listing.category === "Beaches" ? "selected" : "" %> >Beaches</option>
+            <option value="Others" <%= listing.category === "Others" ? "selected" : "" %> >Others</option>
+          </select>
+        </div>
+        
+        
+        <div class="col-6">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" class="form-control" name="country" value="<%= listing.country %>" id="country" placeholder="Enter Country" required>
+        </div>
+      
+        <div class="col-md-9">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" name="location" value="<%= listing.location %>" id="location" placeholder="Enter Location in ( District, State ) format or ( Taluka, District, State ) format" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="pincode" class="form-label">Pincode</label>
+          <input type="number" class="form-control" name="pincode" value="<%= listing.pincode %>" id="pincode" placeholder="Enter Pincode no." required>
+        </div>
+      
+        <div class="col-md-12">
+          <b><small class="note">Note:</small></b>
+          <ol>
+            <li><small>All fields are mandatory except image</small></li>
+            <li><small>Image file should be in '.jpeg', '.png', '.jpg'</small></li>
+            <li><small>Image file size should not exceed 500 kB</small></li>
+          </ol>
+        </div>
+
+        <button class="btn btn-success sbt-btn mt-0"> Update </button>
+
+      
+      </form>
+    </div>
+  </div>
+</body>

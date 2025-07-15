@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<style>
+  .heading {
+    text-align: center;
+    padding-top: 1rem;
+  }
+</style>
+
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="heading">
+                <h3>Add details to list your home</h3>
+            </div>
+
+            <form class="row g-3" action="/listing" method="POST" enctype="multipart/form-data">
+                <div class="col-12">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" required>
+                </div>
+            
+                <div class="col-12">
+                  <label for="description" class="form-label">Description</label><br>
+                  <textarea rows=4 cols=175 class="form-control" name="description" id="description" placeholder="Write Description here" required></textarea>
+                </div>
+            
+                <div class="col-12">
+                  <label for="image" class="form-label">Upload Listing Image</label>
+                  <input type="file" class="form-control" id="image" name="image" required>
+                </div>
+                
+                <div class="col-md-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" class="form-control" name="price" id="price" placeholder="Enter Price per Night" required>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="category" class="form-label">Category</label><br>
+                  <select name="category" id="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Trending">Trending</option>
+                    <option value="Rooms">Rooms</option>
+                    <option value="Mountains">Mountains</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Farms">Farms</option>
+                    <option value="Castles">Castles</option>
+                    <option value="Cities">Iconic Cities</option>
+                    <option value="Arctic">Arctic</option>
+                    <option value="Pools">Amazing Pools</option>
+                    <option value="Beaches">Beaches</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+            
+                <div class="col-md-6">
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" class="form-control" name="country" id="country" placeholder="Enter Country" required>
+                </div>
+            
+                <div class="col-md-9">
+                  <label for="location" class="form-label">Location</label>
+                  <input type="text" class="form-control" name="location" id="location" placeholder="Enter Location in ( Village, District, State ) format or ( City, District, State ) format" required>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="pincode" class="form-label">Pincode</label>
+                  <input type="number" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode no." required>
+                </div>
+
+                <div class="col-md-12">
+                  <b><small class="note">Note:</small></b>
+                  <ol>
+                    <li><small>All fields are mandatory</small></li>
+                    <li><small>Image file should be in '.jpeg', '.png', '.jpg'</small></li>
+                    <li><small>Image file size should not exceed 500 kB</small></li>
+                  </ol>
+                </div>
+            
+                <div class="col-2 mt-0">
+                  <button type="submit" class="btn btn-success sbt-btn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
