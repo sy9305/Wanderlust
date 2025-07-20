@@ -71,7 +71,6 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // const mongoDbUrl =  "mongodb://127.0.0.1:27017/Wanderlust";
-// const dbUrl = process.env.ATLAS_DB_URL;
 
 main()
   .then(() => {
