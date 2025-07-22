@@ -23,5 +23,11 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <hr>
 
 🧱 Tech Stack
-
+| Category        | Tech Used                |
+|----------------|--------------------------|
+| **Frontend**    | HTML, CSS, Javascript                 |
+| **Backend**     | Node.js, Express.js      |
+| **Database**    | MongoDB (via Mongoose)   |
+| **Architecture**| MVC (Model-View-Controller) |
+| **Maps Integration** | Leaflet   |
 
