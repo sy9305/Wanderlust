@@ -4,5 +4,5 @@ This project demonstrates a solid understanding of full-stack web development us
 The architecture is modular and follows MVC principles, with attention to security and usability.
 <hr>
 
-Deployed on render
+Deployed on render.
 Project Deployment link :- https://wanderlust-qx2a.onrender.com/
