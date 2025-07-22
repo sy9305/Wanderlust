@@ -9,16 +9,17 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <hr>
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/338fe96a-fb5c-438f-9d50-8b2d7c801f5f" />
 <hr>
-## ✨ **Features**<br>
+
+✨ **Features**<br>
 <ul>
-  <li>🏠 **Property Listings** – Users can create, view, and manage property listings.</li>
-  <li>📝 **Reviews** – Authenticated users can leave reviews on listings.</li>
-  <li>🧑‍💻 **User Authentication** – Register, Login and Logout functionality.</li>
-  <li>🔎 **Fast Access** – Search & Filter by Category/Title/Location/Country.</li>
-  <li>🔐 **Alerts** – Flash Messages(auto-dismiss) & Sessions.</li>
-  <li>📷 **Files** – Image Upload via Cloudinary.</li>
-  <li>🗺️ **Maps Integration** – View listing locations on an interactive map (using Leaflet).</li>
-  <li>🧭 **MVC Architecture** – Structured codebase for easy maintenance and scalability.</li>
+  <li>🏠 <b>Property Listings</b> – Users can create, view, and manage property listings.</li>
+  <li>📝 <b>Reviews</b> – Authenticated users can leave reviews on listings.</li>
+  <li>🧑‍💻 <b>User Authentication</b> – Register, Login and Logout functionality.</li>
+  <li>🔎 <b>Fast Access</b> – Search & Filter by Category/Title/Location/Country.</li>
+  <li>🔐 <b>Alerts</b> – Flash Messages(auto-dismiss) & Sessions.</li>
+  <li>📷 <b>Files</b> – Image Upload via Cloudinary.</li>
+  <li>🗺️ <b>Maps Integration</b> – View listing locations on an interactive map (using Leaflet).</li>
+  <li>🧭 <b>MVC Architecture</b> – Structured codebase for easy maintenance and scalability.</li>
 </ul>
 <hr>
 
