@@ -10,11 +10,26 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/338fe96a-fb5c-438f-9d50-8b2d7c801f5f" />
 <hr>
 ✨ Features<br>
-- 🏠 Property Listings – Users can create, view, and manage property listings.<br>
-- 📝 Reviews – Authenticated users can leave reviews on listings.<br>
-- 🧑‍💻 User Authentication – Register, Login and Logout functionality.<br>
-- 🔎 Fast Access – Search & Filter by Category/Title/Location/Country.<br>
-- 🔐 Alerts – Flash Messages(auto-dismiss) & Sessions.<br>
-- 📷 Files – Image Upload via Cloudinary.<br>
-- 🗺️ Maps Integration – View listing locations on an interactive map (using Leaflet).<br>
-- 🧭 MVC Architecture – Structured codebase for easy maintenance and scalability.<br>
+<ul>
+
+<li>🏠 Property Listings – Users can create, view, and manage property listings.</li>
+<li>📝 Reviews – Authenticated users can leave reviews on listings.</li>
+<li>🧑‍💻 User Authentication – Register, Login and Logout functionality.</li>
+<li>🔎 Fast Access – Search & Filter by Category/Title/Location/Country.</li>
+<li>🔐 Alerts – Flash Messages(auto-dismiss) & Sessions.</li>
+<li>📷 Files – Image Upload via Cloudinary.</li>
+<li>🗺️ Maps Integration – View listing locations on an interactive map (using Leaflet).</li>
+<li>🧭 MVC Architecture – Structured codebase for easy maintenance and scalability.</li>
+  
+🏠 Property Listings – Users can create, view, and manage property listings.<br>
+📝 Reviews – Authenticated users can leave reviews on listings.<br>
+🧑‍💻 User Authentication – Register, Login and Logout functionality.<br>
+🔎 Fast Access – Search & Filter by Category/Title/Location/Country.<br>
+🔐 Alerts – Flash Messages(auto-dismiss) & Sessions.<br>
+📷 Files – Image Upload via Cloudinary.<br>
+🗺️ Maps Integration – View listing locations on an interactive map (using Leaflet).<br>
+🧭 MVC Architecture – Structured codebase for easy maintenance and scalability.<br>
+</ul>
+<hr>
+
+
