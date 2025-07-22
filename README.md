@@ -21,7 +21,7 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 </ul>
 <hr>
 
-🧱 <h5>Tech Stack</h5>
+🧱 <b>Tech Stack</b>
 | Category        | Tech Used                |
 |----------------|--------------------------|
 | **Frontend**    | HTML, CSS, Javascript                 |
