@@ -9,7 +9,7 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <hr>
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/338fe96a-fb5c-438f-9d50-8b2d7c801f5f" />
 <hr>
-✨ Features
+✨ Features<br>
 - 🏠 Property Listings – Users can create, view, and manage property listings.<br>
 - 📝 Reviews – Authenticated users can leave reviews on listings.<br>
 - 🧑‍💻 User Authentication – Register, Login and Logout functionality.<br>
