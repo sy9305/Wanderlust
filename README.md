@@ -7,4 +7,4 @@ The architecture is modular and follows MVC principles, with attention to securi
 Deployed on render.<br>
 Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <hr>
-![Uploading image.png…]()
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/338fe96a-fb5c-438f-9d50-8b2d7c801f5f" />
