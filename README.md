@@ -1,7 +1,5 @@
 # 🌍 Wanderlust - Travel Listing Web App
-A full-stack travel accommodation web application where users can explore, list, and review unique places to stay — from mountains to castles, pools to farms.
-This project demonstrates a solid understanding of full-stack web development using Node.js, Express, MongoDB, EJS templating, and third-party services like Cloudinary, Leaflet maps.   
-The architecture is modular and follows MVC principles, with attention to security and usability.
+<b>Wanderlust</b> is a full-stack travel accommodation web application where users can <b>explore listings</b>, <b>create listings</b>, and <b>write reviews for listings</b>. This project demonstrates a solid understanding of full-stack web development using Node.js, Express, MongoDB, EJS templating, and third-party services like Cloudinary, Leaflet maps, Passport, etc. Built with the <b>MVC architecture</b> ensuring scalability, separation of concerns, and maintainability. Special attention has been given to security, user experience, and responsive design.
 <hr>
 
 **Deployed on render**.<br>
