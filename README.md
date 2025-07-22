@@ -9,7 +9,12 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 <hr>
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/338fe96a-fb5c-438f-9d50-8b2d7c801f5f" />
 <hr>
-## ✨ Features
-
-- 🏠 **Property Listings** – Users can create, view, and manage property listings.
-- 📝 **Reviews** – Authenticated users can leave reviews on listings.
+✨ Features
+- 🏠 Property Listings – Users can create, view, and manage property listings.
+- 📝 Reviews – Authenticated users can leave reviews on listings.
+- 🧑‍💻 User Authentication – Register, Login and Logout functionality.
+- 🔎 Fast Access – Search & Filter by Category/Title/Location/Country
+- 🔐 Alerts – Flash Messages(auto-dismiss) & Sessions.
+- 📷 Files – Image Upload via Cloudinary
+- 🗺️ Maps Integration – View listing locations on an interactive map (using Leaflet).
+- 🧭 MVC Architecture – Structured codebase for easy maintenance and scalability.
