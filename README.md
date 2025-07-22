@@ -22,4 +22,6 @@ Project Deployment link :- https://wanderlust-qx2a.onrender.com/
 </ul>
 <hr>
 
+🧱 Tech Stack
+
 
